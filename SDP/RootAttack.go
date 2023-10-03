@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-type RotAttack struct{}
+type RootAttack struct{}
 
-func NewRotAttack() *RotAttack {
-	return &RotAttack{}
+func NewRootAttack() *RootAttack {
+	return &RootAttack{}
 }
 
-func (r RotAttack) Attack() {
+func (r RootAttack) Attack() {
 	fmt.Println("Its smell and melting...")
 }

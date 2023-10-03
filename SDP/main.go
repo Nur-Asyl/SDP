@@ -9,7 +9,8 @@ func main() {
 	Pudge := NewHero()
 
 	Pudge.setAttack("Hook", NewHookAttack())
-	Pudge.setAttack("Root", NewRotAttack())
+	Pudge.setAttack("Root", NewRootAttack())
+	Pudge.setAttack("Ultimate", NewUltimateDismemberAttack())
 
 	fmt.Println("\nFIRST SKILL:")
 
@@ -18,4 +19,8 @@ func main() {
 	fmt.Println("\nSECOND SKILL:")
 
 	Pudge.makeAttack("Root")
+
+	fmt.Println("\nULTIMATE SKILL:")
+
+	Pudge.makeAttack("Ultimate")
 }
