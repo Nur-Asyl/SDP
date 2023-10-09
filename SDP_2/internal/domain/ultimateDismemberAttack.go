@@ -2,8 +2,7 @@ package domain
 
 import "fmt"
 
-type UltimateDismemberAttack struct {
-}
+type UltimateDismemberAttack struct{}
 
 func NewUltimateDismemberAttack() *UltimateDismemberAttack {
 	return &UltimateDismemberAttack{}
