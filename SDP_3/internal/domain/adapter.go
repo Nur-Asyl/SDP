@@ -1,9 +1,17 @@
 package domain
 
-type WarriorAdapter struct {
-	w Warrior
+type MeteorCastAdapter struct {
+	M MeteorCast
 }
 
-func (wa WarriorAdapter) Cast(magicItem IMagicItem) {
-	wa.w.Attack(magicItem.Name())
+func (mca MeteorCastAdapter) attack() {
+	mca.M.Cast()
+}
+
+type BeemLaserCastAdapter struct {
+	B BeemLaserCast
+}
+
+func (blca BeemLaserCastAdapter) attack() {
+	blca.B.Cast()
 }

@@ -27,6 +27,12 @@ func main() {
 	pudge.SetAttack("Hook", domain.NewHookAttack())
 	pudge.SetAttack("Root", domain.NewRootAttack())
 	pudge.SetAttack("Ultimate", domain.NewUltimateDismemberAttack())
+	m := &domain.MeteorCast{}
+	mca := domain.MeteorCastAdapter{M: *m}
+	pudge.SetAttack("Meteor", mca)
+	b := &domain.BeemLaserCast{}
+	blca := domain.BeemLaserCastAdapter{B: *b}
+	pudge.SetAttack("Beem Laser", blca)
 
 	fmt.Println("\nFIRST SKILL:")
 
@@ -39,4 +45,12 @@ func main() {
 	fmt.Println("\nULTIMATE SKILL:")
 
 	pudge.Attack("Ultimate")
+
+	fmt.Println("Meteor Spell:")
+
+	pudge.Attack("Meteor")
+
+	fmt.Println("Beem Laser Spell:")
+
+	pudge.Attack("Beem Laser")
 }

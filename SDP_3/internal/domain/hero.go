@@ -41,7 +41,6 @@ func (m Mage) CheckBuffs() {
 type Warrior struct {
 	passiveBuffs IBuff
 	attackSkills map[string]AttackStrategy
-	magicItem    IMagicItem
 }
 
 func NewWarrior() *Warrior {
